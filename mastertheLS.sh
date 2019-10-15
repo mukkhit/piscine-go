@@ -1,3 +1,3 @@
 #!/bin/bash 
 
-ls -pm --sort-time
+ls -pm --sort=time
