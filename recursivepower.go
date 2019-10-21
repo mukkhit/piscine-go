@@ -1,17 +1,13 @@
 package piscine
 
 func RecursivePower(nb int, power int) int {
-	{
-		if nb >= 0 && nb < 25 {
-			if nb == 1 || nb == 0 {
-				return 1
-			}
-			if nb > 1 {
-				return RecursivePower(nb, power-1) * nb
-			}
-		}
-
+	result := nb
+	if power > 0 {
+		result *= RecursivePower(nb, power-1)
+	} else if power == 0 {
+		result = 1
+	} else {
+		result = 0
 	}
-	return 0
-
+	return result
 }
